@@ -27,7 +27,8 @@ export default function reducer (state = initialState, action){
             }      
         case POST_SUCCESS:
             return {
-                ...state
+                ...state,
+                smurfs: action.payload.data
             }          
         case POST_FAILURE:
             return {

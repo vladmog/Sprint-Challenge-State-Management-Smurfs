@@ -4,7 +4,7 @@ import Form from './Form';
 import Smurfs from './Smurfs';
 import Smurf from './Smurf';
 import { connect } from 'react-redux';
-import { getData } from '../actions/actions';
+import { getData, postData } from '../actions/actions';
 
 
 class App extends Component {
@@ -13,10 +13,14 @@ class App extends Component {
     this.props.getData()
   }
 
+  postSmurf = (smurf) => {
+    this.props.postData(smurf)
+  }
+
   render() {
     return (
       <div className="App">
-        <Form />
+        <Form postSmurf = {this.postSmurf}/>
         <Smurfs smurfs = {this.props.smurfs}/>
       </div>
     );
@@ -29,4 +33,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps, {getData})(App);
+export default connect(mapStateToProps, {getData, postData})(App);

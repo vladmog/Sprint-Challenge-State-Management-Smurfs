@@ -1,4 +1,4 @@
-import {GET_START, GET_SUCCESS, GET_FAILURE} from '../actions/actions';
+import {GET_START, GET_SUCCESS, GET_FAILURE, POST_START, POST_SUCCESS, POST_FAILURE} from '../actions/actions';
 
 let initialState = {
     smurfs: []
@@ -17,6 +17,19 @@ export default function reducer (state = initialState, action){
                 smurfs: action.payload.data
             }          
         case GET_FAILURE:
+            return {
+                ...state
+            } 
+
+        case POST_START:
+            return {
+                ...state
+            }      
+        case POST_SUCCESS:
+            return {
+                ...state
+            }          
+        case POST_FAILURE:
             return {
                 ...state
             } 

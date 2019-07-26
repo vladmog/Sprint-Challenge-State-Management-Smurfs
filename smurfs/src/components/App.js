@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Form from './Form';
 import Smurfs from './Smurfs';
-import Smurf from './Smurf';
 import { connect } from 'react-redux';
 import { getData, postData } from '../actions/actions';
 

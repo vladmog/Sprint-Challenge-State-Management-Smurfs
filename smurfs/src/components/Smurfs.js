@@ -6,7 +6,7 @@ function Smurfs(props) {
         <div>
             {props.smurfs.map(smurf => {
                 return (
-                    <Smurf key = {smurf} smurf = {smurf} />
+                    <Smurf key = {Math.random()} smurf = {smurf} />
                 )
             })}
         </div>

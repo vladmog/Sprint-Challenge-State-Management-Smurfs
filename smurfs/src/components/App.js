@@ -23,8 +23,9 @@ class App extends Component {
 }
 
 function mapStateToProps(state){
-  console.log(state)
-  return {}
+  return {
+    smurfs: state.smurfs
+  }
 }
 
 export default connect(mapStateToProps, {getData})(App);

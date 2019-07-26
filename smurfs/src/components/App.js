@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
 import { connect } from 'react-redux';
+import { getData } from '../actions/actions';
 
 
 class App extends Component {
+
+  componentDidMount(){
+    this.props.getData()
+  }
+
   render() {
     return (
       <div className="App">
@@ -21,4 +27,4 @@ function mapStateToProps(state){
   return {}
 }
 
-export default connect(mapStateToProps, {})(App);
+export default connect(mapStateToProps, {getData})(App);
